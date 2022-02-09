@@ -4,8 +4,11 @@ const router = express.Router();
 
 const ctrl = require("./home.ctrl");
 
-router.get("/",ctrl.hello);
-router.get("/login",ctrl.login);
+router.get("/",ctrl.output.hello);
+router.get("/login",ctrl.output.login);
+
+//로그인 데이터를 받아옴
+router.post("/login",ctrl.process.login);
 
 module.exports = router;
 
