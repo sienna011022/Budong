@@ -18,12 +18,11 @@ function login(){
         },
         body : JSON.stringify(req),
     })
-    .then((res) => res.json())
-    .then((res) => {
-        if(res.success){
+        .then((res) => res.json())
+        .then((res) => {
+            if(res.success){
             //로그인 success시 이동할 페이지
             location.href = "/";
-
         }else{
             alert(res.msg);
         }
