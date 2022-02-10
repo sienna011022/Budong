@@ -1,17 +1,24 @@
 "use srtict"
 
 const id = document.querySelector("#id"),
+name = document.querySelector("#name"),
  psword = document.querySelector("#psword"),
- loginBtn = document.querySelector("#button");
-loginBtn.addEventListener("click",login);
+ confirmPsword = document.querySelector("#confirm-psword"),
+registerBtn = document.querySelector("#button");
+registerBtn.addEventListener("click",register);
 
-function login(){
+
+function register(){
     const req = {
         id : id.value,
+        name : id.name,
         psword : psword.value,
+        confirmPsword : confirmPsword.value
     
     };
-    fetch("/login",{
+    console.log(req);
+
+    fetch("/register",{
         method : "POST",
         headers :{
             "Content-Type" : "application/json",
@@ -22,13 +29,13 @@ function login(){
         .then((res) => {
             if(res.success){
             //로그인 success시 이동할 페이지
-            location.href = "/";
+            location.href = "/login";
         }else{
             alert(res.msg);
         }
     })
     .catch((err) => {
-        console.error(new Error("로그인 중 에러 발생"));
+        console.error(new Error("회원가입 중 에러 발생"));
     });
 
 
