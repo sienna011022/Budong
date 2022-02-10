@@ -1,5 +1,3 @@
-"use strict";
-
 const fs = require("fs").promises;
 class UserStorage{
     static #getUserInfo(data,id){
@@ -14,16 +12,29 @@ class UserStorage{
              return userInfo;  
             }
 
-    static getUsers(...fields) { 
-    //    const users = this.#users;
-    const newUsers = fields.reduce((newUsers,field) => {
-        if(users.hasOwnProperty(field)){
-            newUsers[field] = users[field];}
+
+    static #getUsers(data,fields) {
+        const users = JSON.parse(data);
+        const newUsers = fields.reduce((newUsers,field) => {
+            if(users.hasOwnProperty(field)){
+                newUsers[field] = users[field];
+            }
             return newUsers;
-        },{});
-        return newUser;
-            
+            },{});
+            return newUsers;
+                
     }
+    static getUsers(...fields) { 
+        return fs
+        .readFile("./src/databases/users.json")
+          .then((data) => {
+              return this.#getUsers(data,fields);
+          })
+          .catch(console.error);
+         }
+
+
+        
     static getUserInfo(id){
        return fs
        .readFile("./src/databases/users.json")
@@ -34,13 +45,14 @@ class UserStorage{
         }
         
    
-    static save(userInfo){
-        // const users = this.#users;
+    static async save(userInfo){
+        const users = await this.getUsers("id","psword","name");
+    
         users.id.push(userInfo.id);
         users.name.push(userInfo.name);
         users.psword.push(userInfo.psword);
+        fs.writeFile("./src/databases/users.json",JSON.stringify(users));
         return {success : true};
-    
     }
-    }
+}
     module.exports = UserStorage;
