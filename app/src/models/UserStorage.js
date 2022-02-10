@@ -35,8 +35,7 @@ static getUsers(...fields) {
         users.id.push(userInfo.id);
         users.name.push(userInfo.name);
         users.psword.push(userInfo.psword);
-       
-        console.log(users);
+        return {success : true};
     
     }
 }

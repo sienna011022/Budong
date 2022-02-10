@@ -19,8 +19,9 @@ class User{
 
     register(){
         const client = this.body;
-        //userstorage에 받은걸 던져줘야함
-        UserStorage.save(client);
+        const response = UserStorage.save(client);
+        return response;
+        
     }
 
 
