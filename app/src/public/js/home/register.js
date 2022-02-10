@@ -11,7 +11,7 @@ registerBtn.addEventListener("click",register);
 function register(){
     const req = {
         id : id.value,
-        name : id.name,
+        name : id.value,
         psword : psword.value,
         confirmPsword : confirmPsword.value
     
