@@ -1,4 +1,6 @@
-const fs = require("fs").promises;
+//userstorage에서 user정보가져옴
+const db = require("../config/db");
+
 class UserStorage{
     static #getUserInfo(data,id){
             const users= JSON.parse(data);
@@ -14,45 +16,28 @@ class UserStorage{
 
 
     static #getUsers(data,fields) {
-        const users = JSON.parse(data);
-        const newUsers = fields.reduce((newUsers,field) => {
-            if(users.hasOwnProperty(field)){
-                newUsers[field] = users[field];
-            }
-            return newUsers;
-            },{});
-            return newUsers;
+        
                 
     }
     static getUsers(...fields) { 
-        return fs
-        .readFile("./src/databases/users.json")
-          .then((data) => {
-              return this.#getUsers(data,fields);
-          })
-          .catch(console.error);
+     
          }
 
 
         
     static getUserInfo(id){
-       return fs
-       .readFile("./src/databases/users.json")
-         .then((data) => {
-             return this.#getUserInfo(data,id);
-         })
-         .catch(console.error);
-        }
+     //데이터베이스에 접근 후 유저 정보 반환
+     return new Promise((resolve,reject) => {
+        db.query("SELECT * FROM users where id = ?",[id],(err,data) =>{
+            if(err) reject(err);
+            resolve (data[0]);
+            
         
-   
+     });
+    });
+}
     static async save(userInfo){
-        const users = await this.getUsers("id","psword","name");
-    
-        users.id.push(userInfo.id);
-        users.name.push(userInfo.name);
-        users.psword.push(userInfo.psword);
-        fs.writeFile("./src/databases/users.json",JSON.stringify(users));
-        return {success : true};
+      
     }
 }
     module.exports = UserStorage;
