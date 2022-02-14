@@ -2,33 +2,12 @@
 const db = require("../config/db");
 
 class UserStorage{
-    static #getUserInfo(data,id){
-            const users= JSON.parse(data);
-             // const users = this.#users;
-             const idx = users.id.indexOf(id);
-             const userKeys = Object.keys(users);
-             const userInfo = userKeys.reduce((newUser,info) => {
-                 newUser[info] = users[info][idx];
-                 return newUser;
-             },{});
-             return userInfo;  
-            }
-
-
-    static #getUsers(data,fields) {
-        
-                
-    }
-    static getUsers(...fields) { 
-     
-         }
-
-
-        
+   //getUsers 필요하면 만들기
     static getUserInfo(id){
      //데이터베이스에 접근 후 유저 정보 반환
      return new Promise((resolve,reject) => {
-        db.query("SELECT * FROM users where id = ?",[id],(err,data) =>{
+         const query = "SELECT * FROM users where id = ?;";
+        db.query(query,[id],(err,data) =>{
             if(err) reject(err);
             resolve (data[0]);
             
@@ -36,8 +15,27 @@ class UserStorage{
      });
     });
 }
+
+    static getUserId(name){
+        //데이터베이스에 접근 후 유저 정보 반환
+    return new Promise((resolve,reject) => {
+         const query = "SELECT * FROM users where name = ?;";
+        db.query(query,[name],(err,data) =>{
+            if(err) reject(err);
+            resolve (data[0]);
+           
+     });
+    });
+}
     static async save(userInfo){
-      
+        return new Promise((resolve,reject) => {
+            const query = "INSERT INTO users(id,name,psword,phone_num) VALUES(?,?,?,?);";
+            //물음표에 대입될 데이트
+           db.query(query,[userInfo.id,userInfo.name,userInfo.psword,userInfo.phone_num],(err) =>{
+               if(err) reject(`${err}`);
+               resolve({success :true});
+        });
+       });
     }
 }
     module.exports = UserStorage;
