@@ -18,6 +18,9 @@ const output = {
 
     find_id : (req,res)=>{
         res.render("home/find_id");
+    },
+    find_psword : (req,res)=>{
+        res.render("home/find_psword");
     }
 };
 
@@ -36,9 +39,18 @@ const process = {
      find_id  : async(req,res) => {
          const user = new User(req.body);
          const response = await user.find_id();
-        console.log(response);
          return res.json(response);
      },
+     find_psword : async(req,res) => {
+        const user = new User(req.body);
+        const response = await user.find_psword();
+        return res.json(response);
+    },
+    
+    make_token : async(req,res) => {
+        const user = new User(req.body);
+        const response = await user.make_token();
+    },
      register :async (req,res) => {
         const user = new User(req.body);
         const response = await user.register();

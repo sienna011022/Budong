@@ -25,7 +25,7 @@ function find_id(){
         .then((res) => res.json())
         .then((res) => {
             if(res.success){
-            alert("찾으시는 아이디는"+res.msg+"입니다");
+                alert("찾으시는 아이디는 " +res.msg+"입니다");
         }else{
             alert("아이디를 찾을 수 없습니다");
         }

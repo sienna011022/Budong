@@ -17,7 +17,7 @@ function login(){
             "Content-Type" : "application/json",
         },
         body : JSON.stringify(req),
-    })
+    }) // 다시 response 보낸거 여기서 받아줌
         .then((res) => res.json())
         .then((res) => {
             if(res.success){

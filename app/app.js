@@ -17,5 +17,6 @@ app.use(express.urlencoded({extended :true}));
 
 app.use("/",home); //미들웨어use 연결해줌 index.js랑
 
+
 module.exports = app;
 

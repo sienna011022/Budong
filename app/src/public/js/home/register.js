@@ -5,6 +5,7 @@ name = document.querySelector("#name"),
  psword = document.querySelector("#psword"),
  confirmPsword = document.querySelector("#confirm-psword"),
  phone_num = document.querySelector("#phone_num"),
+ email = document.querySelector("#email"),
 registerBtn = document.querySelector("#button");
 
 registerBtn.addEventListener("click",register);
@@ -23,6 +24,7 @@ function register(){
         name : name.value,
         psword : psword.value,
         phone_num : phone_num.value,
+        email : email.value,
     };
 
     fetch("/register",{
