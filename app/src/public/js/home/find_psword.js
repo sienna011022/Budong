@@ -27,14 +27,18 @@ function find_psword(){
         //여기서 response받음
         .then((res) => {
             if(res.success){
-                console.log("일치하는 정보 있음");
                 fetch("/make_token",{
                     method : "POST",
                     headers :{
                         "Content-Type" : "application/json",
                     },
                     body : JSON.stringify(res),
-                })
+    
+                }).then((res) => res.json())
+                .then((res => 
+                 console.log("find psword에서 정의"+res.token+res.id)));
+               
+                   
         
                                   
         }else{

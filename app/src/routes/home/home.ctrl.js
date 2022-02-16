@@ -3,6 +3,7 @@
 const UserStorage = require("../../models/UserStorage");
 const User = require("../../models/User");
 const res = require("express/lib/response");
+const { save } = require("../../models/UserStorage");
 
 const output = {
     hello : (req,res) => {
@@ -47,11 +48,22 @@ const process = {
         return res.json(response);
     },
     
+
     make_token : async(req,res) => {
         const user = new User(req.body);
-        const response = await user.make_token();
+        const token_data = await user.make_token();
+        return res.json(token_data);
+        // const user2 = new sUser();
+        // const save_2 = await user2.save_token(token_data);
+        // return res.json(save_2);
     },
+    // save_token : async(req,res) => {
+    //     console.log(req.body);
+    //     const user = new User(req.body);
+    //     const response = await user.save_token();
+    // },
      register :async (req,res) => {
+
         const user = new User(req.body);
         const response = await user.register();
         return res.json(response);

@@ -47,11 +47,12 @@ class UserStorage{
         });
        });
     }
-    static async save_token(client){
+    static async save_token(token_data){
+        console.log(token_data.token,token_data.id);
         return new Promise((resolve,reject) => {
-            const query = "update users SET token = ? where id = ?; ";
+            const query = "UPDATE users SET token = ? where id = ?; ";
             //물음표에 대입될 데이터
-           db.query(query,[client.token,client.id],(err) =>{
+           db.query(query,[token_data.token,token_data.id],(err) =>{
                if(err) reject(`${err}`);
                resolve({success :true});
         });

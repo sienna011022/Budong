@@ -15,6 +15,7 @@ router.post("/register",ctrl.process.register);
 router.post("/find_id",ctrl.process.find_id);
 router.post("/find_psword",ctrl.process.find_psword);
 router.post("/make_token",ctrl.process.make_token);
+
 module.exports = router;
 
 

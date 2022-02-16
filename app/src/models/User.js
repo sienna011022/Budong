@@ -74,15 +74,17 @@ class User{
         id : client.msg,
         ttl: 300 // ttl 값 설정 (5분)
         };
-      console.log(token_data);
+       return token_data ;
+       
+    
         
     
    }
-    async save_token(){
-        const client = this.body;
+    async save_token(token_data){
+
         try{
-        const response = await UserStorage.save_token(client);
-        return response;
+        const response = await UserStorage.save_token(token_data);
+
         }catch(err){
             console.error(err);
         }
