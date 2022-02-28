@@ -28,6 +28,7 @@ function find_id(){
                 alert("찾으시는 아이디는 " +res.msg+"입니다");
         }else{
             alert("아이디를 찾을 수 없습니다");
+        
         }
     })
     .catch((err) => {

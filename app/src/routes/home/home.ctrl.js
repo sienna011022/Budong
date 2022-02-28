@@ -22,6 +22,10 @@ const output = {
     },
     find_psword : (req,res)=>{
         res.render("home/find_psword");
+    },
+
+    reset_psword : (req,res)=>{
+        res.render("home/reset_psword");
     }
 };
 
@@ -52,16 +56,14 @@ const process = {
     make_token : async(req,res) => {
         const user = new User(req.body);
         const token_data = await user.make_token();
-        return res.json(token_data);
-        // const user2 = new sUser();
-        // const save_2 = await user2.save_token(token_data);
-        // return res.json(save_2);
+        if(token_data){
+            const user = new User();
+            const response = await user.node_mailer(token_data);
+           // console.log(res.json(node_mailer));
+        }
+        
     },
-    // save_token : async(req,res) => {
-    //     console.log(req.body);
-    //     const user = new User(req.body);
-    //     const response = await user.save_token();
-    // },
+    
      register :async (req,res) => {
 
         const user = new User(req.body);
@@ -69,6 +71,12 @@ const process = {
         return res.json(response);
        
      }, 
+
+     reset_psword : async(req,res) => {
+        const user = new User(req.body);
+        const response = await user.reset_psword();
+        return res.json(response);
+     }
 
 };
 

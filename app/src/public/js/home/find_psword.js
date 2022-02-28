@@ -1,9 +1,10 @@
 
-
 const email = document.querySelector("#email"),
 id = document.querySelector("#id");
 registerBtn = document.querySelector("#button");
 registerBtn.addEventListener("click",find_psword);
+
+
 
 function find_psword(){
 
@@ -34,13 +35,7 @@ function find_psword(){
                     },
                     body : JSON.stringify(res),
     
-                }).then((res) => res.json())
-                .then((res => 
-                 console.log("find psword에서 정의"+res.token+res.id)));
-               
-                   
-        
-                                  
+                })         
         }else{
             alert("일치하는 비밀번호를 찾을 수 없습니다");
        }
@@ -51,3 +46,4 @@ function find_psword(){
         console.error(new Error("비밀번호 찾기 중 에러 발생"));
     });
 }
+
