@@ -68,6 +68,17 @@ class UserStorage{
         });
        });
     }
+
+    static async save_product(product){
+        return new Promise((resolve,reject) => {
+            const query = "INSERT INTO offerings(area,floor,direction,roomNum,bathNum,details) VALUES(?,?,?,?,?,?);";
+            //물음표에 대입될 데이터
+           db.query(query,[product.area,product.floor,product.direction,product.room,product.restroom,product.info],(err) =>{
+               if(err) reject(`${err}`);
+               resolve({success :true});
+        });
+       });
+    }
 }
 
 module.exports = UserStorage;

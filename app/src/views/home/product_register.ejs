@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>거래유형</title>
+    <link rel="stylesheet" href="/css/home/product_register.css">
+    <link href="index10.css" rel="stylesheet" type="text/css" />
+    <script src = "/js/home/product_register.js" defer></script>
+</head>
+
+<body>
+
+    <nav class="menu">
+        <ul>
+            <li> <a href="#"> <img src="assets/logo.jpg" alt="로고"> </a></li>
+            <li> <a href="#"> 메인 </a></li>
+            <li><a href="#"> 전자계약 </a></li>
+            <li> <a href="#"> 커뮤니티 </a></li>
+            <li><a href="#"> 금융서비스 </a></li>
+            <li><a href="#"> 법원서비스</a></li>
+            <li><a href="#"> <b>매물등록</b> </a></li>
+            <li><a href="#"> 문의 </a></li>
+            <li><a href="#"> 로그인 </a></li>
+        </ul>
+    </nav>
+
+    <div style="padding:50px;">
+        <div class="wrap">
+            <center><strong style="font-size: 25px; align: center;">거래유형</strong></center>
+            <br></br>
+            <div style="display:flex; margin-left: 16%">
+                <div class="pointer">
+                    <div class="text-content">
+                        <p class="p">본인인증</p>
+                    </div>
+                </div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <div class="pointer">
+                    <div class="text-content">
+                        <p class="p">매물확인</p>
+                    </div>
+                </div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <div class="pointer">
+                    <div class="text-content">
+                        <p class="p" style="margin-top:40px;">&nbsp;&nbsp;서류<br>가져오기</p>
+                    </div>
+                </div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <div class="pointer1">
+                    <div class="text-content">
+                        <p class="p">거래유형</p>
+                    </div>
+                </div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <div class="pointer">
+                    <div class="text-content">
+                        <p class="p">매물등록</p>
+                    </div>
+                </div>
+            </div>
+            <br>
+
+            <div class="div">
+                <form method="get">
+                    <table>
+                        <caption> <strong>구조 등록</strong></caption>
+                        <tr>
+                            <th> 매물종류</th>
+                            <td> <select id="type" required />
+                                <option value="0">아파트</option>
+                                <option value="1">빌라</option>
+                                <option value="2">주택</option>
+                                <option value="3">,,,</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>면적</th>
+                            <td> 공급면적 <input type="text" id="area" style="width:100px;" placeholder="면적" required />㎡
+                            </td>
+                            <th>층</th>
+                            <td> <input type="text" id="floor" style="width:100px;" placeholder="해당층" required>층</td>
+                        </tr>
+                        <tr>
+                            <th>방향</th>
+                            <td><input type="text" id="direction" style="width:100px;" required></td>
+                            <th>방/욕실 수</th>
+                            <td><input type="text" id="room" style="width:100px;">개/<input type="text" id=""
+                                    style="width:100px;" required>개 <input type="checkbox" id="
+duplex">복층</td>
+                        </tr>
+                        <tr>
+                            <th>매물등록</th>
+                            <td> <select id="count" required>
+                                    <option value="0">월세</option>
+                                    <option value="1">전세</option>
+                                    <option value="2">매매</option>
+                                    <option value="3">분양
+                                    </option>
+                                </select></td>
+                            <th> 보증금/월세</th>
+                            <td><input id="money1" type="text"  style="width:300px;" placeholder="월세에 해당안되시면 보증금만 작성"
+                                    required>원</td>
+                            <th> &nbsp;&nbsp;월 관리비</th>
+                            <td><input type="text" id="money2" style="width:100px;" required>원</td>
+                        </tr>
+                    </table>
+                    <table>
+                        <tr>
+                            <th>상세정보</th>
+                            <td><input type="text" id="add" Detail style="width:600px; height: 200px;"
+                                    placeholder="수도, 가스비 별도/ 옵션(냉장고, 세탁기, 침대, 전자레인지) 유무/ 주차 유무/ 근처 편의시설 등 " required />
+                            </td>
+                        </tr>
+                        <!--
+                        <th>
+                            <form method="post" enctype="multipart/form-data">
+                                <center>사진올리기
+                        </th>
+                        <td><input type="file" class="button" style="width:400px; " id="chooseFile" name="chooseFile"
+                                accept="image/*" onchange="loadFile(this)" required /></center>
+                        </td>
+                        -->
+                        <br></br>
+                    </table>
+                    <br></br>
+
+                    <center><strong>매물을 등록하시겠습니까?</strong> <input type="submit" class="button" id="register"
+                            value=">"> <!--이게 등록 버튼이래요-->
+                        <br></br>
+                        <strong><button type="button" class="button" id = "nextBtn"
+                                >다음</button></strong>
+                    </center>
+                </form>
+
+
+
+                <br>
+            </div>
+        </div>
+      
+
+</body>
+
+</html>

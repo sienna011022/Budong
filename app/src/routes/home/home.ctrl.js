@@ -4,6 +4,7 @@ const UserStorage = require("../../models/UserStorage");
 const User = require("../../models/User");
 const res = require("express/lib/response");
 const { save } = require("../../models/UserStorage");
+const Product = require("../../models/product_register");
 
 const output = {
     hello : (req,res) => {
@@ -26,6 +27,9 @@ const output = {
 
     reset_psword : (req,res)=>{
         res.render("home/reset_psword");
+    },
+    product_register : (req,res)=>{
+        res.render("home/product_register");
     }
 };
 
@@ -75,6 +79,12 @@ const process = {
      reset_psword : async(req,res) => {
         const user = new User(req.body);
         const response = await user.reset_psword();
+        return res.json(response);
+     },
+
+     product_register : async(req,res) => {
+         const product = new Product(req.body)
+         const response = await product.product_register();
         return res.json(response);
      }
 
