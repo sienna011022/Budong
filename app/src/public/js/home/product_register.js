@@ -1,16 +1,15 @@
-const area = document.getElementById("area").value,
-floor = document.getElementById("floor").value,
-room = document.getElementById("room").value;
-restroom = document.getElementById("restroom").value;
-month_money= document.getElementById("money1").value;
-month_control = document.getElementById("money2").value;
-info = document.getElementById("add").value;
+const area = document.getElementById("area"),
+floor = document.getElementById("floor"),
+room = document.getElementById("room");
+restroom = document.getElementById("restroom");
+month_money= document.getElementById("money1");
+month_control = document.getElementById("money2");
+info = document.getElementById("add");
 register = document.getElementById("register");
 register.addEventListener("click",register_function);
 
 function register_function(){
-
-
+    //return console.log(info.value)
     const req = {
         area : area.value,
         floor : floor.value,
@@ -20,7 +19,7 @@ function register_function(){
         month_control : month_control.value,
         info : info.value,
     };
-
+   return console.log(req)
 
     fetch("/product_register",{
         method : "POST",

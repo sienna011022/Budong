@@ -26,6 +26,9 @@ const output = {
 
     reset_psword : (req,res)=>{
         res.render("home/reset_psword");
+    },
+    product_register : (req,res)=>{
+        res.render("home/product_register")
     }
 };
 
@@ -76,8 +79,11 @@ const process = {
         const user = new User(req.body);
         const response = await user.reset_psword();
         return res.json(response);
-     }
+     },
 
+     product_register : async(req,res) => {
+        console.log("process과정")
+     },
 };
 
 
