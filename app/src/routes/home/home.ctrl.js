@@ -1,6 +1,8 @@
 "use strict";
 //데이터베이스 로드
 const UserStorage = require("../../models/UserStorage");
+const ProductStorage = require("../../models/ProductStorage");
+const Product = require("../../models/Product");
 const User = require("../../models/User");
 const res = require("express/lib/response");
 const { save } = require("../../models/UserStorage");
@@ -82,7 +84,9 @@ const process = {
      },
 
      product_register : async(req,res) => {
-        console.log("process과정")
+        const product = new Product(req.body);
+        const response = await product.product_register();
+        return res.json(response)
      },
 };
 

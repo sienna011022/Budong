@@ -19,7 +19,6 @@ function register_function(){
         month_control : month_control.value,
         info : info.value,
     };
-   return console.log(req)
 
     fetch("/product_register",{
         method : "POST",

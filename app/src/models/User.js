@@ -1,7 +1,6 @@
 "use strict";
 const res = require("express/lib/response");
 const UserStorage = require("./UserStorage");
-
 const email = require("./email")
 class User{
     constructor(body){

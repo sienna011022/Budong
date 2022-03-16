@@ -18,7 +18,7 @@ router.post("/find_id",ctrl.process.find_id);
 router.post("/find_psword",ctrl.process.find_psword);
 router.post("/make_token",ctrl.process.make_token);
 router.post("/reset_psword",ctrl.process.reset_psword);
-router.get("/product_register",ctrl.process.product_register);
+router.post("/product_register",ctrl.process.product_register);
 
 
 module.exports = router;
