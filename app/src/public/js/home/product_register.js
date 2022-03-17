@@ -1,24 +1,41 @@
-const area = document.getElementById("area"),
+const offering_type = document.getElementById("offering_type"),
+area = document.getElementById("area"),
 floor = document.getElementById("floor"),
 room = document.getElementById("room");
 restroom = document.getElementById("restroom");
-month_money= document.getElementById("money1");
+duplex = document.getElementById("duplex");
+month_money = document.getElementById("money1");
 month_control = document.getElementById("money2");
 info = document.getElementById("add");
+offering_solution = document.getElementById("offering_solution"),
 register = document.getElementById("register");
 register.addEventListener("click",register_function);
 
+
 function register_function(){
-    //return console.log(info.value)
+
+
+
+    if(duplex.checked) {
+        duplex.value = 'y'}
+        else {
+            duplex.value = 'N'
+        }
+
+
     const req = {
         area : area.value,
         floor : floor.value,
         room : room.value,
+        duplex : duplex.value,
         restroom : restroom.value,
         month_money : month_money.value,
         month_control : month_control.value,
+        offering_type : offering_type.value,
+        offering_solution : offering_solution.value,
         info : info.value,
     };
+
 
     fetch("/product_register",{
         method : "POST",

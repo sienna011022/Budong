@@ -12,7 +12,7 @@ class Product{
         const client = this.body;
         try{
         const response = await ProductStorage.save(client);
-       
+        return response;
         }catch(err){
             console.error(err);
         }

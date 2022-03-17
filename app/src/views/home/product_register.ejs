@@ -66,36 +66,37 @@
                         <caption> <strong>구조 등록</strong></caption>
                         <tr>
                             <th> 매물종류</th>
-                            <td> <select id="type" required />
-                                <option value="0">아파트</option>
-                                <option value="1">빌라</option>
-                                <option value="2">주택</option>
-                                <option value="3">,,,</option>
+                            <td> <select id="offering_type" required />
+                                <option value="Apartment">아파트</option>
+                                <option value="Villa">빌라</option>
+                                <option value="house">주택</option>
+                                <option value="etc">,,,</option>
                                 </select>
                             </td>
                         </tr>
                         <tr>
                             <th>면적</th>
-                            <td> 공급면적 <input id="area" type="text" style="width:100px;" placeholder="면적" required />㎡
+                            <td> 공급면적 <input id="area" type="text" style="width:100px;" placeholder="면적"  />㎡
                             </td>
                             <th>층</th>
-                            <td> <input  id="floor" type="text" style="width:100px;" placeholder="해당층" required>층</td>
+                            <td> <input  id="floor" type="text" style="width:100px;" placeholder="해당층" >층</td>
                         </tr>
                         <tr>
                             <th>방향</th>
-                            <td><input id="direction"  type="text" style="width:100px;" required></td>
+                            <td><input id="direction"  type="text" style="width:100px;" ></td>
                             <th>방/욕실 수</th>
                             <td><input id="room" type="text"  style="width:100px;">개/<input  id="restroom" type="text"
-                                    style="width:100px;" required>개 <input type="checkbox" id="
-duplex">복층</td>
+                                    style="width:100px;" required>개 
+                                    <input type="checkbox" name="input_check" value='1' id="duplex"/>
+                                </td>
                         </tr>
                         <tr>
                             <th>매물등록</th>
-                            <td> <select id="count" required>
-                                    <option value="0">월세</option>
-                                    <option value="1">전세</option>
-                                    <option value="2">매매</option>
-                                    <option value="3">분양
+                            <td> <select id="offering_solution" required>
+                                    <option value="month">월세</option>
+                                    <option value="rent">전세</option>
+                                    <option value="Buy">매매</option>
+                                    <option value="sub division">분양
                                     </option>
                                 </select></td>
                             <th> 보증금/월세</th>
