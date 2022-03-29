@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no"/>
+    <script src = "/js/home/page5_2.js" defer></script>
+    <title>물건정보확인</title>
+    <link rel="stylesheet" href="/css/home/page5_2.css">
+    <!-- <link href="index10.css" rel="stylesheet" type="text/css" /> -->
+
+
+  </head>
+  <body>
+    <center>
+
+  <div class="wrap">
+    <p>실시간으로 국토정보 시스템과 연계하여 정보를 제공하므로 조회 시 지연이 발생할 수 있습니다. 본 서비스에서 제공되는 정보는 <span style="color:red;">법적인 효력이 없으며, 참고용으로 활용</span>하시기 바랍니다.</p>
+  </div><br>
+    </center>
+
+    <div class="contents">
+      <div class="title">
+        <span style="color:blue;">-</span>
+        <b>전자계약서에 활용 및 적용 가능한 부동산 정보는 아래와 같습니다.</b>
+      </div><br>
+
+      <div class="table">
+        <table>
+          <tr>
+            <th>지번주소</th>
+            <td>
+              <input type="text" id="numa">
+            </td>
+             <th>도로명주소</th>
+            <td>
+              <input type="text" id="roada">
+            </td>
+          </tr>
+
+          <tr>
+            <th>토지지목</th>
+            <td>
+              <input type="text" id="landt">
+            </td>
+             <th>토지면적</th>
+            <td>
+              <input type="text" id="landarea">
+            </td>
+          </tr>
+          
+          <tr>
+            <th>개별공시지가</th>
+            <td>
+              <input type="text" id="appvalue">
+            </td>
+             <th>건물면적</th>
+            <td>
+              <input type="text" id="area">
+            </td>
+          </tr>
+
+          <tr>
+            <th>건물가격</th>
+            <td>
+              <input type="text" id="price">
+            </td>
+             <th>건물용도</th>
+            <td>
+              <input type="text" id="buse">
+            </td>
+          </tr>
+
+          <tr>
+            <th>용적률</th>
+            <td>
+              <input type="text" id="floorr">
+            </td>
+             <th>건폐율</th>
+            <td>
+              <input type="text" id="landr">
+            </td>
+          </tr>
+
+          <tr>
+            <th>건물구조</th>
+            <td>
+              <input type="text" id="struc">
+            </td>
+             <th>건물지붕</th>
+            <td>
+              <input type="text" id="roof">
+            </td>
+          </tr>
+
+          <tr>
+            <th>위반여부</th>
+            <td>
+              <input type="text" id="lig">
+            </td>
+             <th>대지권비율</th>
+            <td>
+              <input type="text" id="ratio">
+            </td>
+          </tr>
+
+          <tr>
+            <th>승인일자(준공년도)</th>
+            <td>
+              <input type="date" id="confirm">
+            </td>
+             <th>확정일자주민센터</th>
+            <td>
+              <input type="text" id="date">
+            </td>
+          </tr>
+
+          <tr>
+            <th>용도지역</th>
+            <td colspan="3">
+              <input type="text" id="use">
+            </td>
+          </tr>
+
+          <tr>
+           <th>용도구역</th>
+            <td colspan="3">
+              <input type="text" id="use1">
+            </td>
+          </tr>
+
+          <tr>
+            <th>용도지구</th>
+            <td colspan="3">
+              <input type="text" id="use2">
+            </td>
+          </tr>
+
+          <tr>
+            <th>도시군계획시설</th>
+            <td colspan="3">
+              <input type="text" id="mltry">
+            </td>
+          </tr>
+        </table>
+      </div>
+
+      <p>!!공시지가와 건물가격 정보가 최신 정보인지 대장정보에서 확인하시기 바랍니다.</p><br>
+
+      <div class="warning">
+        <p>※<input type="text" id="chktime">
+        에 국토부 정보와 일치함을 확인하였습니다.</p>
+      </div>
+
+      </div>
+
+    <center>
+      <div class="finish">
+        <button id="위치확인" class="finish1"oneclick = "빈칸" >위치확인</button>
+        <button id="물건등록" class="finish2"oneclick = "빈칸" >물건등록</button>
+        <button id="취소" class="finish3"oneclick = "빈칸">취소</button>
+      </div>
+      
+    </center>
+
+
+  </body>
+</html>

@@ -31,7 +31,12 @@ const output = {
     },
     product_register : (req,res)=>{
         res.render("home/product_register")
-    }
+    },
+    page5_1 : (req,res)=>{
+        res.render("home/page5_1")
+    },
+    page5_2 :(req,res)=>{
+        res.render("home/page5_2")}
 };
 
 const process = {
@@ -87,7 +92,16 @@ const process = {
         const product = new Product(req.body);
         const response = await product.product_register();
         return res.json(response)
+        //pdf 엮기
      },
+     page5_2: async(req,res) => {
+        const product = new Product(req.body);
+        const response = await product.page5_2();
+        return res.json(response)
+     },
+        //pdf 엮기
+  
+
 };
 
 

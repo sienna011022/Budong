@@ -18,6 +18,16 @@ class Product{
         }
     }
 
+    async page5_2(){
+        const client = this.body;
+        try{
+        const response = await ProductStorage.page5_2(client);
+        return response;
+        }catch(err){
+            console.error(err);
+        }
+    }
+
 }
 
 

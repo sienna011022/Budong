@@ -11,6 +11,8 @@ offering_solution = document.getElementById("offering_solution"),
 register = document.getElementById("register");
 register.addEventListener("click",register_function);
 
+
+const UserStorage = require("");
 //계약서용코드
 const obj = {
     area : area.value,

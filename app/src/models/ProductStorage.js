@@ -1,4 +1,5 @@
 
+const { json } = require("express/lib/response");
 const db = require("../config/db");
 class ProductStorage{
 
@@ -11,11 +12,23 @@ class ProductStorage{
                if(err) reject(`${err}`);
                resolve({success :true});
 
+            });
         });
-       });
     }
 
-  
-}
+
+    static async page5_2(productInfo){
+    
+        return new Promise((resolve,reject) => {
+            const query = "INSERT INTO jpage5_2(data,profile)Values(?,?);"
+            db.query(query,["page_2",JSON.stringify(productInfo)],(err) =>{
+                if(err) reject(`${err}`);
+                resolve({success :true});
+
+
+            });
+        });
+     }
+ }
 
 module.exports = ProductStorage;

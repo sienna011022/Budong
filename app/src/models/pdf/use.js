@@ -1,6 +1,6 @@
 const InvoiceGenerator = require('./PDFKit')
 
-const obj = require('../src/public/js/home/product_register')
+const obj = require('../../public/js/home/product_register')
 
 
 //받아오기
