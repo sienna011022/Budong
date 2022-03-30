@@ -28,6 +28,26 @@ class Product{
         }
     }
 
+    async page7_1(){
+        const client = this.body;
+        try{
+        const response = await ProductStorage.page7_1(client);
+        return response;
+        }catch(err){
+            console.error(err);
+        }
+    }
+
+    async page7_2(){
+        const client = this.body;
+        try{
+        const response = await ProductStorage.page7_2(client);
+        return response;
+        }catch(err){
+            console.error(err);
+        }
+    }
+
 }
 
 

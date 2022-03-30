@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no"/>
+    <link rel="stylesheet" href="/css/home/page7_1.css">
+    <script src = "/js/home/page7_1.js" defer></script>
+    <title>매물등록_세부확인사항1</title>
+
+
+       
+
+
+  </head>
+  <body>
+
+    
+    <nav class="menu">
+      <ul>
+       <li><a href="#"> <img src="assets/logo.jpg" alt="로고"> </a></li>
+       <li><a href="#" onclick="location.href='../p12/index.html';"> 전자계약 </a></li>
+       <li><a href="#"> 커뮤니티 </a></li>
+       <li><a href="#"> 금융서비스 </a></li>
+       <li><a href="#"> 법원서비스</a></li>
+       <li><a href="#" onclick="location.href='../p7/index.html';"> <b>매물등록</b> </a></li>
+       <li><a href="#"> 문의 </a></li>
+       <li><a href="#"> 로그인 </a></li>
+      </ul>
+    </nav>
+    <br>
+    <br>
+    <br>
+    <div class="Procedure">
+      <button class="Procedure1" id="Registered capital certification">등록자<br>본인인증</button>
+      <button class="Procedure1" id="estate electronic registration"> 부동산 <br>전자등록용도</button>
+      <button class="Procedure1" id="Basic Checklist for Brokerage Targets"> 중개대상물<br> 기본 확인사항 </button>
+      <button class="Procedure2" id="Details Checklist for Brokerage Targets"> 중개대상물<br> 세부 확인사항</button>
+      <button class="Procedure1" id="Registration Confirmation"> 중개대상물<br> 등록 확인</button>
+    </div>
+
+    
+    <div class="content">
+
+      <center><h4>※안내※</h4></center>
+    <div class="wrap">
+      <h5>내부∙외부의 시설물 상태(건축물), 벽면 및 도배상태 환경조건까지는 중개대상물에 한하여 <br>개업공인중개사가 매도(임대)의뢰인에게 자료를 요구하여 확인한 사항을 선택하거나 적습니다.<br> 매도(임대)인이 직접 작성할 경우 개업공인중개사(?)의 검증과정이 별도로 진행됩니다.</h5>
+    </div>
+<br><br>
+    <div class="contents">
+      <div class="title">
+        <b>⑩내부∙외부 시설물의 상태(건축물)</b>
+      </div><br>
+
+      <div class="table">
+      <form>
+     
+     <table>
+        <tr>
+        <th rowspan="2" align="center">수도</th>
+        <th align="center">파손여부<span style="color:red"> *</span></th>
+        <td>
+          <input type="radio" id="waterN" name="파손" value="없음">없음
+          <input type="radio" id="waterY" name="파손" value="있음1">있음
+        </td>
+        <th align="center">파손위치</th>
+        <td>
+          <input type="text" id="waterloc" style="width:300px;" placeholder="수도 파손위치 입력">
+        </td>    
+      </tr>
+
+      <tr>
+        <th align="center">용수량<span style="color:red"> *</span></th>
+        <td>
+          <input type="radio" id="wquant0" name="용수량" value="정상">정상
+          <input type="radio" id="wquant1" name="용수량" value="부족함">부족함
+        </td>
+        <th align="center">용수부족위치</th>
+        <td>
+          <input type="text" id="wqloc" style="width:300px;" placeholder="용수부족위치 입력">
+        </td>
+      </tr>
+
+      <tr>
+        <th align="center">전기</th>
+        <th align="center">공급상태<span style="color:red">*</span></th>
+        <td>
+          <input type="radio" id="elec0" name="공급상태" value="정상">정상
+          <input type="radio" id="elec1" name="공급상태" value="교체필요">교체필요
+        </td>
+        <th align="center">교체할 부분</th>
+        <td>
+          <input type="text" id="elecloc" style="width:300px;" placeholder="교체할 부분 입력">
+        </td>
+      </tr>
+
+      <tr>
+        <th align="center">가스(취사용)</th>
+        <th align="center">공급방식<span style="color:red"> *</span></th>
+        <td>
+          <input type="radio" id="gas0" name="가스" value="도시가스">도시가스
+          <input type="radio" id="gas1" name="가스" value="그 밖의 방식">그 밖의 방식
+        </td>
+        <th align="center">그 밖의 방식</th>
+        <td>
+          <input type="text" id="gasoth" style="width:300px;" placeholder="그밖의 공급방식 상세 입력">
+        </td>
+      </tr>
+
+      <tr>
+        <th rowspan="2" align="center">소방</th>
+        <th align="center">소화전<span style="color:red"> *</span></th>
+        <td>
+          <input type="radio" id="fire0" name="소화전" value="없음">없음
+          <input type="radio" id="fire1" name="소화전" value="있음">있음
+        </td>
+        <th align="center">소화전위치</th>
+        <td>
+          <input type="text" id="fireloc" style="width:300px;" placeholder="소화전 위치 입력">
+        </td>    
+      </tr>
+
+      <tr>
+        <th align="center">비상벨<span style="color:red"> *</span></th>
+        <td>
+          <input type="radio" id="bell0" name="비상벨" value="없음">없음
+          <input type="radio" id="bell1" name="비상벨" value="있음">있음
+        </td>
+        <th align="center">비상벨위치</th>
+        <td>
+          <input type="text" id="belloc" style="width:300px;" placeholder="비상벨 위치 입력">
+        </td>    
+      </tr>
+
+      <tr>
+        <th rowspan="3" align="center">난방방식 및 연료공급</th>
+        <th rowspan="2" align="center">공급방식<span style="color:red"> *</span></th>
+        <td rowspan="2">
+          <input type="radio" id="heat0" name="난방" value="중앙공급">중앙공급
+          <input type="radio" id="heat1" name="난방" value="개별공급">개별공급
+        </td>
+        <th rowspan="2" align="center">시설작동<span style="color:red"> *</span></th>
+        <td>
+          <input type="radio" id="hope0" name="난방시설" value="정상">정상
+          <input type="radio" id="hope1" name="난방시설" value="수선필요">수선필요
+          <input type="text" id="hopeloc" style="width:200px;" placeholder="수선필요 입력">
+        </td>    
+      </tr>
+
+      <tr>
+        <td>※개별공급인 경우 사용연한
+        <input type="text" id="hopedur" style="width:100px;" placeholder="사용연한 입력">
+        <input type="radio" id="hopeno" value="1">확인불가
+        </td>
+      </tr>
+
+      <tr>
+        <th align="center">종류<span style="color:red"> *</span></th>
+        <td colspan="3">
+          <input type="radio" id="hcase0" name="난방종류" value="도시가스">도시가스
+          <input type="radio" id="hcase1" name="난방종류" value="기름">기름
+          <input type="radio" id="hcase2" name="난방종류" value="프로판가스">프로판가스
+          <input type="radio" id="hcase3" name="난방종류" value="연탄">연탄
+          <input type="radio" id="hcase4" name="난방종류" value="밖의">그 밖의 종류
+          <input type="text" id="hcaseE" style="width:300px;" placeholder="그밖의 종류 상세 입력">
+        </td>
+      </tr>
+
+      <tr>
+        <th align="center">승강기</th>
+        <th align="center">상태<span style="color:red"> *</span></th>
+        <td colspan="3">
+          <input type="radio" id="elev0" name="승강기" value="양호">양호
+          <input type="radio" id="elev1" name="승강기" value="불량">불량
+          <input type="radio" id="elev2" name="승강기" value="없음">없음
+        </td>
+      </tr>
+
+      <tr>
+        <th align="center">배수</th>
+        <th align="center">배수시설<span style="color:red"> *</span></th>
+        <td>
+          <input type="radio" id="drw0" name="배수" value="정상">정상
+          <input type="radio" id="drw1" name="배수" value="수선필요">수선필요
+        </td>
+        <th align="center">수선필요 내역</th>
+        <td>
+          <input type="text" id="drwloc" style="width:300px;" align="left" placeholder="수선필요 내역 입력">
+        </td>
+      </tr>
+
+      <tr>
+        <th rowspan="2" align="center">그 밖의 시설물</th>
+        <td rowspan="2" align="center" colspan="4">
+          <input type="text" id="else" style="width:90%" align="left">
+        </td>
+      </tr>
+
+      </table><br><br>
+    
+
+    
+    
+    </form>
+    </div></div></div>
+
+    <br>
+
+    <center>
+      <div class="finish">
+        <button id="이전화면" class="finish1" onclick="location.href='../p15/index.html';"> &lt 이전화면</button>
+        <button id="임시저장" class="finish2" >임시저장</button>
+        <button id="다음화면" class="finish1" onclick="location.href='../p17/index.html';">다음화면  &gt </button>
+      </div>
+      
+    </center>
+
+    
+  </body>
+</html>

@@ -21,7 +21,32 @@ class ProductStorage{
     
         return new Promise((resolve,reject) => {
             const query = "INSERT INTO jpage5_2(data,profile)Values(?,?);"
-            db.query(query,["page_2",JSON.stringify(productInfo)],(err) =>{
+            db.query(query,["page5_2",JSON.stringify(productInfo)],(err) =>{
+                if(err) reject(`${err}`);
+                resolve({success :true});
+
+
+            });
+        });
+     }
+      static async page7_1(productInfo){
+    
+        return new Promise((resolve,reject) => {
+            const query = "INSERT INTO jpage7_1(data,profile)Values(?,?);"
+            db.query(query,["page7_1",JSON.stringify(productInfo)],(err) =>{
+                if(err) reject(`${err}`);
+                resolve({success :true});
+
+
+            });
+        });
+     }
+
+     static async page7_2(productInfo){
+    
+        return new Promise((resolve,reject) => {
+            const query = "INSERT INTO jpage7_2(data,profile)Values(?,?);"
+            db.query(query,["page7_2",JSON.stringify(productInfo)],(err) =>{
                 if(err) reject(`${err}`);
                 resolve({success :true});
 

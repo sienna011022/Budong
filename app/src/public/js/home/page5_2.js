@@ -72,7 +72,7 @@ function register(){
         }
     })
     .catch((err) => {
-        console.error(new Error("상품등록 중 에러 발생"));
+        console.error(new Error("page5_2 등록 중 에러 발생"));
     });
 
 

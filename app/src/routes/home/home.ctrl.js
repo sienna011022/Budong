@@ -36,7 +36,16 @@ const output = {
         res.render("home/page5_1")
     },
     page5_2 :(req,res)=>{
-        res.render("home/page5_2")}
+        res.render("home/page5_2")
+    },
+
+    page7_1 :(req,res)=>{
+        res.render("home/page7_1")
+    },
+    page7_2 :(req,res)=>{
+        res.render("home/page7_2")
+    }
+
 };
 
 const process = {
@@ -97,6 +106,16 @@ const process = {
      page5_2: async(req,res) => {
         const product = new Product(req.body);
         const response = await product.page5_2();
+        return res.json(response)
+     },
+     page7_1: async(req,res) => {
+        const product = new Product(req.body);
+        const response = await product.page7_1();
+        return res.json(response)
+     },
+     page7_2: async(req,res) => {
+        const product = new Product(req.body);
+        const response = await product.page7_2();
         return res.json(response)
      },
         //pdf 엮기

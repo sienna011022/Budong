@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no"/>
+
+    <link rel="stylesheet" href="/css/home/page7_2.css">
+    <script src = "/js/home/page7_2.js" defer></script>
+    <title>매물등록_세부확인사항2</title>
+       
+
+
+  </head>
+  <body>
+
+    
+    <nav class="menu">
+      <ul>
+       <li><a href="#"> <img src="assets/logo.jpg" alt="로고"> </a></li>
+       <li><a href="#" onclick="location.href='../p12/index.html';"> 전자계약 </a></li>
+       <li><a href="#"> 커뮤니티 </a></li>
+       <li><a href="#"> 금융서비스 </a></li>
+       <li><a href="#"> 법원서비스</a></li>
+       <li><a href="#" onclick="location.href='../p7/index.html';"> <b>매물등록</b> </a></li>
+       <li><a href="#"> 문의 </a></li>
+       <li><a href="#"> 로그인 </a></li>
+      </ul>
+    </nav>
+    <br>
+    <br>
+    <br>
+    <div class="Procedure">
+       <button class="Procedure1" id="Registered capital certification">등록자<br>본인인증</button>
+      <button class="Procedure1" id="estate electronic registration"> 부동산 <br>전자등록용도</button>
+      <button class="Procedure1" id="Basic Checklist for Brokerage Targets"> 중개대상물<br> 기본 확인사항 </button>
+      <button class="Procedure2" id="Details Checklist for Brokerage Targets"> 중개대상물<br> 세부 확인사항</button>
+      <button class="Procedure1" id="Registration Confirmation"> 중개대상물<br> 등록 확인</button>
+    </div>
+
+    
+    <div class="content">
+
+      <center><h4>※안내※</h4></center>
+    <div class="wrap">
+      <h5>내부∙외부의 시설물 상태(건축물), 벽면 및 도배상태 환경조건까지는 중개대상물에 한하여 <br>개업공인중개사가 매도(임대)의뢰인에게 자료를 요구하여 확인한 사항을 선택하거나 적습니다.<br> 매도(임대)인이 직접 작성할 경우 개업공인중개사(?)의 검증과정이 별도로 진행됩니다.</h5>
+    </div><br><br>
+      
+    <div class="contents">
+      <div class="title">
+        <b>⑪벽면 및 바닥면</b>
+      </div><br>
+
+      <div class="table">
+      <form>
+     
+     <table>
+       <tr>
+          <th align="center">벽면 균열<span style="color:red"> *</span></th>
+          <td>
+          <input type="radio" id="wall0" name="벽면균열" value="없음">없음
+          <input type="radio" id="wall1" name="벽면균열" value="있음">있음
+          </td>
+          <th align="center">벽면균열 위치</th>
+          <td>
+            <input type="text" id="walloc" style="width:300px;" placeholder="벽면균열 위치 입력">
+          </td>
+        </tr>
+
+        <tr>
+          <th align="center">벽면 누수<span style="color:red"> *</span></th>
+          <td>
+          <input type="radio" id="wlek0" name="벽면누수" value="없음">없음
+          <input type="radio" id="wlek1" name="벽면누수" value="있음">있음
+          </td>
+          <th align="center">벽면누수 위치</th>
+          <td>
+            <input type="text" id="wlekloc" style="width:300px;" placeholder="벽면누수 위치 입력">
+          </td>
+        </tr>
+
+        <tr>
+          <th align="center">바닥면 상태<span style="color:red"> *</span></th>
+          <td>
+          <input type="radio" id="pl0" name="바닥면상태" value="깨끗함">깨끗함
+          <input type="radio" id="pl1" name="바닥면상태" value="보통임">보통임
+          <input type="radio" id="pl2" name="바닥면상태" value="수리필요">수리필요
+          </td>
+          <th align="center">바닥면수리 필요 위치</th>
+          <td>
+            <input type="text" id="plloc" style="width:300px;" placeholder="바닥면 수리필요 위치 입력">
+          </td>
+        </tr>
+      </table><br><br>
+    
+    </form>
+    </div>
+
+      
+    <div class="title">
+        <b>⑫증빙자료 및 특이사항</b>
+      </div><br>
+
+      <div class="table">
+      <form>
+        <table>
+          <tr>
+            <th>
+              사진 첨부<span style="color:red"> *</span>
+            </th>
+            <td>
+            <form action="받을곳" method="post" enctype="multipart/form-data">
+            <input type="file" name="profile" id="image" multiple/>
+            <input type="submit">
+            </td>
+            <th>
+              3D파일 및 동영상 첨부<span style="color:red"> *</span>
+            </th>
+            <td>
+            <form action="받을곳" method="post" enctype="multipart/form-data">
+            <input type="file" name="profile" id="video" multiple/>
+            <input type="submit">
+            </td>
+          </tr>
+
+          <tr>
+            <th>기타 특이사항</th>
+            <td colspan="3">
+              <input type="text" id="etc" style="width:80%;" placeholder="반려동물등 기타 특이사항">
+            </td>
+          </tr>
+        </table>
+      </form>
+      </div>
+    
+    
+    </div></div>
+
+    <br>
+
+    <center>
+        <div class="finish">
+            <button id="이전화면" class="finish1" onclick="location.href='../p15/index.html';"> &lt 이전화면</button>
+            <button id="임시저장" class="finish2" >임시저장</button>
+            <button id="다음화면" class="finish1" onclick="location.href='../p17/index.html';">다음화면  &gt </button>
+      </div>
+      
+    </center>
+
+    
+
+  </body>
+</html>
