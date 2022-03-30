@@ -25,7 +25,7 @@ router.post("/reset_psword",ctrl.process.reset_psword);
 router.post("/product_register",ctrl.process.product_register);
 router.post("/page5_2",ctrl.process.page5_2);
 router.post("/page7_1",ctrl.process.page7_1);
-router.post("/page7_1",ctrl.process.page7_2);
+router.post("/page7_2",ctrl.process.page7_2);
 module.exports = router;
 
 
