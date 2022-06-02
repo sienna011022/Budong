@@ -6,3 +6,4 @@
 2. app 파일로 들어가기
 3. npm start
 4. 주소창에 localhost:3000/product_register
+DB수정중
