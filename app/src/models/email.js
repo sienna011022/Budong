@@ -6,13 +6,13 @@ class email{
         service: 'gmail',
         port: 465,
         secure: true, // true for 465, false for other ports
-        auth: { // 이메일을 보낼 계정 데이터 입력
+        auth: { // 이메일을 보낼 계정 데이터 입력(새로입력)
           user: 'user email',
           pass: 'user psword',
         },
       });
     const emailOptions = { // 옵션값 설정 
-        from: '20200803@sungshin.ac.kr',
+        from: '',
           to: token_data.email,
           subject: '비밀번호 초기화 이메일입니다.',
           html: `
